@@ -5,7 +5,6 @@
 
 'use strict';
 
-// ASYNC VERSION MATTERS! 1.5.2 is required in order for this test to work.
 var async = require('async');
 var LoopBackContext = require('..');
 var Domain = require('domain');
@@ -107,6 +106,7 @@ describe('LoopBack Context', function() {
   // Heavily edited by others
   it('keeps context when using waterfall() from async 1.5.2',
   function(done) {
+    expect(require('async/package.json').version).to.equal('1.5.2');
     LoopBackContext.runInContext(function() {
       // function 1 which pulls context
       var fn1 = function(cb) {
