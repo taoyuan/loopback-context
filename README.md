@@ -26,7 +26,7 @@ npm config set engine-strict true
 npm install
 ```
 
-This keeps you from using Node < v0.4.5.
+This keeps you from using Node < v4.5.
 
 ## TEST WARNING
 
